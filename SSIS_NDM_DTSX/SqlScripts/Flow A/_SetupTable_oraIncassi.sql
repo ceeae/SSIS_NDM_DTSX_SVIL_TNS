@@ -1,0 +1,83 @@
+USE SchedarioTerritorio
+DECLARE @TableName VARCHAR(50);
+SET @TableName = '_oraIncassi'
+
+DECLARE @CreateTableSQLQuery VARCHAR(MAX);
+
+IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = @TableName)	
+	BEGIN
+		SET @CreateTableSQLQuery = 'CREATE TABLE ' + @TableName + ' (
+		[CHIAVE] [numeric](38, 0) NULL,
+		[NUMTIPOMODELLO] [varchar](38) NULL,
+		[INDICATORESE] [varchar](1) NULL,
+		[NUMEROFATTURA] [numeric](38, 0) NULL,
+		[DATAQUIETANZA] [datetime] NULL,
+		[DENOMINAZIONESPAZIO] [varchar](50) NULL,
+		[TOPONIMOLOCALE] [varchar](30) NULL,
+		[STRADALOCALE] [varchar](100) NULL,
+		[NUMEROCIVICO] [varchar](30) NULL,
+		[CODICECOMUNESIAE] [varchar](3) NULL,
+		[CODCATEGLOCALE] [varchar](1) NULL,
+		[GENERELOCALE] [varchar](3) NULL,
+		[COGNOMEORGANIZZATORE] [varchar](100) NULL,
+		[NOMEORGANIZZATORE] [varchar](100) NULL,
+		[CODICEFISCALE] [varchar](16) NULL,
+		[PARTITAIVA] [varchar](11) NULL,
+		[IDSTRADAORGANIZZATORE] [numeric](38, 0) NULL,
+		[TOPONIMOORGANIZZATORE] [varchar](30) NULL,
+		[STRADAORGANIZZATORE] [varchar](100) NULL,
+		[NUMCIVICOORGANIZZATORE] [varchar](30) NULL,
+		[COMUNEORGANIZZATORE] [varchar](80) NULL,
+		[PROVINCIAORGANIZZATORE] [varchar](2) NULL,
+		[STRADAESETEROORGANIZZATORE] [varchar](300) NULL,
+		[DATAINIZIO] [datetime] NULL,
+		[DATAFINE] [datetime] NULL,
+		[SEPRAG] [varchar](7) NULL,
+		[SEPRAGLOCALE] [varchar](7) NULL,
+		[IDSPAZIO] [numeric](38, 0) NULL,
+		[NUMEROREVERSALE] [varchar](38) NULL,
+		[CODICETIPODOCUMENTO] [varchar](2) NULL,
+		[NUMREVERSALERIFERIMENTO] [varchar](16) NULL,
+		[DATANUMREVERESALERIFERIMENTO] [datetime] NULL,
+		[TITOLARELOCALE] [varchar](50) NULL,
+		[CODGENEREEVENTOQUIETANZA] [varchar](2) NULL,
+		[IMPORTOQUIETANZA] [numeric](12, 2) NULL,
+		[IDQUIETANZA] [numeric](38, 0) NULL,
+		[INCASSONETTO] [varchar](38) NULL,
+		[NUMEROBIGLIETTI] [varchar](38) NULL,
+		[NUMERODOCUMENTI] [varchar](38) NULL,
+		[NUMEROEVENTI] [varchar](38) NULL,
+		[NUMEROGIORNATEEVENTI] [varchar](38) NULL,
+		[DENOMINAZIONELOCALE] [varchar](50) NULL,
+		[LOCALITALOCALE] [varchar](80) NULL,
+		[STATOQUIETANZA] [varchar](1) NULL,
+		[FLAG398] [varchar](1) NULL,
+		[TIPODOCUMENTO] [varchar](1) NULL,
+		[CODACCORDOSPEICATEGORIA] [varchar](6) NULL,
+		[NOTEQUIETANZA] [varchar](250) NULL,
+		[CODGENERELOCALE] [varchar](3) NULL,
+		[CODBASPAZIO] [varchar](13) NULL,
+		[NUMERODITTA] [varchar](5) NULL,
+		[CODSPEI] [varchar](13) NULL,
+		[TIPOMODELLO] [numeric](38, 0) NULL,
+		[FLAGPRIVACY] [varchar](1) NULL,
+		[MISSIONIPROTOCOLLOSAP] [varchar](5) NULL,
+		[CODICEIPAQUIETANZA] [varchar](20) NULL,
+		[REGIMEIVAAPPLICATO] [varchar](20) NULL,
+		
+		[Id] [bigint] IDENTITY(1,1) NOT NULL,
+		[InsertedOn] [datetime] NOT NULL,
+		
+		 CONSTRAINT [PK_' + @TableName + '] PRIMARY KEY CLUSTERED 
+		(
+			[Id] ASC
+		)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+		) ON [PRIMARY]'
+
+		EXEC (@CreateTableSQLQuery);
+
+		SET @CreateTableSQLQuery = 
+			'ALTER TABLE ' + @TableName + ' ADD CONSTRAINT [DF_' + @TableName + '_InsertedOn] DEFAULT (GETUTCDATE()) FOR [InsertedOn]'
+		EXEC (@CreateTableSQLQuery);
+
+	END

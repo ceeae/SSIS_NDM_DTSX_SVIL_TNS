@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTSConfiguration>
+  <DTSConfigurationHeading>
+    <DTSConfigurationFileInfo GeneratedBy="WIN-KHV8JRXRGGV\Administrator" GeneratedFromPackageName="import_sql_flowA" GeneratedFromPackageID="{420A1485-17DF-4F86-81AE-62C5BE47A974}" GeneratedDate="10/04/2017 14.43.59"/>
+  </DTSConfigurationHeading>
+  <Configuration ConfiguredType="Property" Path="\Package.Variables[User::sDataQuietanzaA].Properties[Value]" ValueType="String">
+    <ConfiguredValue>'01-01-1899 12:00:00 AM'</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Variables[User::sDataQuietanzaDa].Properties[Value]" ValueType="String">
+    <ConfiguredValue>'01-01-1899 12:00:00 AM'</ConfiguredValue>
+  </Configuration>
+</DTSConfiguration>

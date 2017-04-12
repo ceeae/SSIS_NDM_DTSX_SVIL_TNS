@@ -1,0 +1,6 @@
+-- *************************************************
+-- Check ProvvPagamentiAccentrati Last Date Imported
+-- *************************************************
+--USE SchedarioTerritorio
+--SELECT NumeroFattura, Data, Log_InserimentoDataOra FROM ProvvPagamentiAccentrati
+--ORDER BY Data DESC

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTSConfiguration>
+  <DTSConfigurationHeading>
+    <DTSConfigurationFileInfo GeneratedBy="WIN-KHV8JRXRGGV\Administrator" GeneratedFromPackageName="import_sql_flowB" GeneratedFromPackageID="{09746C47-C4CF-4B92-8795-B7C668F089A0}" GeneratedDate="07/04/2017 17.04.12"/>
+  </DTSConfigurationHeading>
+  <Configuration ConfiguredType="Property" Path="\Package.Variables[User::sDataReversaleA].Properties[Value]" ValueType="String">
+    <ConfiguredValue>'01-01-1899 12:00:00 AM'</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Variables[User::sDataReversaleDa].Properties[Value]" ValueType="String">
+    <ConfiguredValue>'01-01-1899 12:00:00 AM'</ConfiguredValue>
+  </Configuration>
+</DTSConfiguration>

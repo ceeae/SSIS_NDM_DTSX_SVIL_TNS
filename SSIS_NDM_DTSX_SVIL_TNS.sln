@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{D183A3D8-5FD8-494B-B014-37F57B35E655}") = "SSIS_NDM_DTSX", "SSIS_NDM_DTSX\SSIS_NDM_DTSX.dtproj", "{BE5BFEC2-A8AD-49ED-A76C-6953103374A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlScripts", "SqlScripts", "{B06A6C35-7697-429A-8965-2947A1436F9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigFiles", "ConfigFiles", "{C93F9856-6F76-4AC1-BBDE-65BD66AFA675}"
+	ProjectSection(SolutionItems) = preProject
+		SSIS_NDM_DTSX\ConfFiles\import_sql_flow_A.dtsConfig = SSIS_NDM_DTSX\ConfFiles\import_sql_flow_A.dtsConfig
+		SSIS_NDM_DTSX\ConfFiles\import_sql_flow_B.dtsConfig = SSIS_NDM_DTSX\ConfFiles\import_sql_flow_B.dtsConfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{6834F5C7-301B-4BA1-966C-89B93093CE25}"
+	ProjectSection(SolutionItems) = preProject
+		SSIS_NDM_DTSX\Notes\Checks_.sql = SSIS_NDM_DTSX\Notes\Checks_.sql
+		SSIS_NDM_DTSX\Notes\FlowA_Checks.sql = SSIS_NDM_DTSX\Notes\FlowA_Checks.sql
+		SSIS_NDM_DTSX\Notes\FlowB_Checks.sql = SSIS_NDM_DTSX\Notes\FlowB_Checks.sql
+		SSIS_NDM_DTSX\Notes\Readme.md = SSIS_NDM_DTSX\Notes\Readme.md
+		SSIS_NDM_DTSX\Notes\tnsnames.ora = SSIS_NDM_DTSX\Notes\tnsnames.ora
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flow B", "Flow B", "{BF98AE13-7B23-4C05-9069-E7CC73016534}"
+	ProjectSection(SolutionItems) = preProject
+		SSIS_NDM_DTSX\SqlScripts\Flow B\_Readme_Flow_B.md = SSIS_NDM_DTSX\SqlScripts\Flow B\_Readme_Flow_B.md
+		SSIS_NDM_DTSX\SqlScripts\Flow B\_SetupTable_oraAccentramenti.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\_SetupTable_oraAccentramenti.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SCT-1_Oracle_Select_Accentramenti.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SCT-1_Oracle_Select_Accentramenti.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-1_oraAccentramenti_DeleteTable.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-1_oraAccentramenti_DeleteTable.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-2_ProvvPagamentiAccentrati_AppendNew.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-2_ProvvPagamentiAccentrati_AppendNew.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-3_ProvvPagamentiAccentrati_Update_IdSeprag.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-3_ProvvPagamentiAccentrati_Update_IdSeprag.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-4_ProvvPagamentiAccentrati_Update_IdSepragEmittente.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-4_ProvvPagamentiAccentrati_Update_IdSepragEmittente.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-5_ProvvPagamentiAccentratiDettaglio_CursorInsertDetails.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-5_ProvvPagamentiAccentratiDettaglio_CursorInsertDetails.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-6_ProvvPagamentiAccentratiDettaglio_Update_IdSepragLocale.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-6_ProvvPagamentiAccentratiDettaglio_Update_IdSepragLocale.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flow A", "Flow A", "{A9ABDE21-D044-4607-A221-D41117D8D10D}"
+	ProjectSection(SolutionItems) = preProject
+		SSIS_NDM_DTSX\SqlScripts\Flow A\_Readme_Flow_A.md = SSIS_NDM_DTSX\SqlScripts\Flow A\_Readme_Flow_A.md
+		SSIS_NDM_DTSX\SqlScripts\Flow A\_SetupTable_oraIncassi.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\_SetupTable_oraIncassi.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\ODB-1_oraIncassi_SelectNewIdQuietanza.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\ODB-1_oraIncassi_SelectNewIdQuietanza.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SCT-1_Oracle_Select_Incassi.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SCT-1_Oracle_Select_Incassi.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SCT-2_Oracle_Given_IdQuietanza_Retrieve_VociIncasso.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SCT-2_Oracle_Given_IdQuietanza_Retrieve_VociIncasso.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-1_oraIncassi_DeleteTable.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-1_oraIncassi_DeleteTable.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-2_ProvvIncassi_Select_IdQuietanza_Id.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-2_ProvvIncassi_Select_IdQuietanza_Id.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-3_ProvvIncassi_Update_IdSeprag.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-3_ProvvIncassi_Update_IdSeprag.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE5BFEC2-A8AD-49ED-A76C-6953103374A7}.Development|Default.ActiveCfg = Development
+		{BE5BFEC2-A8AD-49ED-A76C-6953103374A7}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF98AE13-7B23-4C05-9069-E7CC73016534} = {B06A6C35-7697-429A-8965-2947A1436F9A}
+		{A9ABDE21-D044-4607-A221-D41117D8D10D} = {B06A6C35-7697-429A-8965-2947A1436F9A}
+	EndGlobalSection
+EndGlobal
